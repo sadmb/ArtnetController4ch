@@ -1,0 +1,9 @@
+
+addons/.DS_Store
+src/.DS_Store
+src/utils/.DS_Store
+.DS_Store
+/bin/ArtnetController4chDebug.app
+/ArtnetController4ch.xcodeproj/xcuserdata
+/ArtnetController4ch.xcodeproj/xcshareddata
+/ArtnetController4ch.xcodeproj/project.xcworkspace/xcuserdata
