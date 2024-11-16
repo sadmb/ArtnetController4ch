@@ -10,7 +10,7 @@ void ofApp::setup(){
     
     for(int i = 0; i < 512; i++)
     {
-        data[i] = 0;
+        data[i] = default_value;
     }
 
     gui.setup();
@@ -30,12 +30,12 @@ void ofApp::load()
 void ofApp::update(){
     for(int i = 0; i < channel - 1; i+=4)
     {
-        setData(i, r, g, b, w);
+        setData(i, default_value, default_value, default_value, default_value);
     }
     setData(channel - 1, r, g, b, w);
     for(int i = channel; i < 509; i++)
     {
-        setData(i, r, g, b, w);
+        setData(i, default_value, default_value, default_value, default_value);
     }
     if(is_sending)
     {
@@ -80,6 +80,7 @@ void ofApp::draw(){
     ImGui::SliderInt("g", &g, 0, 255);
     ImGui::SliderInt("b", &b, 0, 255);
     ImGui::SliderInt("w", &w, 0, 255);
+    ImGui::SliderInt("default_value", &default_value, 0, 255);
     ImGui::End();
     gui.end();
 }

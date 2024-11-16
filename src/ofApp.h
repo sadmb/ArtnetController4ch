@@ -13,6 +13,7 @@ public:
     int g = 255;
     int b = 255;
     int w = 255;
+    int default_value = 0;
     int pSec = 0;
     unsigned char data[512];
     
